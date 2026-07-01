@@ -1,10 +1,9 @@
-import './App.css'
-import PageRouter from './router';
+import PageRouter from './router'
 
 function App() {
-    return (
-        <PageRouter />
-    )
+  return (
+      <PageRouter />
+  )
 }
 
 export default App
