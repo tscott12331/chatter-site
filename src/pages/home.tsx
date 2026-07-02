@@ -18,7 +18,7 @@ export default function HomePage() {
                         High performance, with full native and 7TV features. Built for the Twitch chat enthusiast.
                     </p>
                 </section>
-                <section className="flex flex-wrap gap-10 justify-around mb-12">
+                <section className="flex flex-wrap gap-10 justify-center mb-12">
                     <div className="min-w-70 max-w-120">
                         <div className="bg-gray-800 p-6 rounded-lg h-30 mb-5">
                             <h3 className="text-xl font-semibold mb-2">Connect to your favorite chats</h3>
