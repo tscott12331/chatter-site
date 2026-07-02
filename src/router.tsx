@@ -6,7 +6,7 @@ import Footer from "./components/footer";
 
 export default function PageRouter() {
     return (
-        <BrowserRouter basename='/chatter-site'>
+        <BrowserRouter basename={import.meta.env.BASE_URL}>
             <Header />
             <Routes>
                 <Route path='/' element={<HomePage />} />

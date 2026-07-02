@@ -14,21 +14,21 @@ export default function HomePage() {
                             <h3 className="text-xl font-semibold mb-2">Connect to your favorite chats</h3>
                             <p className="text-chatter-text-secondary">Low latency, multi-chat support.</p>
                         </div>
-                        <img src="/reg-chat.png" className="w-3/4 m-auto"/>
+                        <img src={`${import.meta.env.BASE_URL}/reg-chat.png`} className="w-3/4 m-auto"/>
                     </div>
                     <div className="min-w-70 max-w-120">
                         <div className="bg-chatter-surface p-6 rounded-lg h-30 mb-5">
                             <h3 className="text-xl font-semibold mb-2">Inspect and engage with chatters</h3>
                             <p className="text-chatter-text-secondary">User cards and reply interface.</p>
                         </div>
-                        <img src="/reply.png" className="w-3/4 m-auto"/>
+                        <img src={`${import.meta.env.BASE_URL}/reply.png`} className="w-3/4 m-auto"/>
                     </div>
                     <div className="min-w-70 max-w-120">
                         <div className="bg-chatter-surface p-6 rounded-lg h-30 mb-5">
                             <h3 className="text-xl font-semibold mb-2">Use your favorite emotes</h3>
                             <p className="text-chatter-text-secondary">7TV integration with emote selector and autocomplete.</p>
                         </div>
-                        <img src="/open-emotes.png" className="w-3/4 m-auto"/>
+                        <img src={`${import.meta.env.BASE_URL}/open-emotes.png`} className="w-3/4 m-auto"/>
                     </div>
                 </section>
             </main>
