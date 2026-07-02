@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+@theme {
+  --color-chatter-bg: #181421;
+  --color-chatter-surface: #211d2c;
+  --color-chatter-text-primary: #e0e0e0;
+  --color-chatter-text-secondary: #a0a0a0;
+  --color-chatter-accent: #6366f1;
+}
+
 :root {
   letter-spacing: 0.18px;
   color-scheme: light dark;
