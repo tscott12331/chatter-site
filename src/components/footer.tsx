@@ -6,7 +6,12 @@ export default function Footer() {
                     <i className="fa-brands fa-github"></i>
                 </a>
             </div>
-            <p>Under construction...</p>
+            <div className="mt-2 text-sm">
+                <a href={`${import.meta.env.BASE_URL}missing-features`} className="hover:text-chatter-text-primary underline decoration-chatter-accent/30 underline-offset-4">
+                    Missing Features
+                </a>
+            </div>
+            <p className="mt-2">Under construction...</p>
         </footer>
     )
 }
