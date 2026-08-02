@@ -22,15 +22,28 @@ export default function OauthRedirectPage() {
         }
     };
 
+    const maskedToken = accessToken
+        ? `${accessToken.slice(0, 4)}${'•'.repeat(Math.max(8, accessToken.length - 8))}${accessToken.slice(-4)}`
+        : '';
+
     return (
         <div className="min-h-screen bg-chatter-bg text-chatter-text-primary flex items-center justify-center p-4">
             <div className="bg-chatter-surface p-8 rounded-lg shadow-xl max-w-md w-full">
+                <div className="flex justify-center mb-4">
+                    <div className="flex items-center justify-center w-14 h-14 rounded-full bg-green-600/20 text-green-500">
+                        <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="m5 12 4 4L19 6" />
+                        </svg>
+                    </div>
+                </div>
                 <h2 className="text-2xl font-bold mb-4 text-center">Authentication Successful</h2>
                 {accessToken ? (
                     <div className="space-y-4">
-                        <p className="text-chatter-text-secondary text-sm">Your access token:</p>
-                        <div className="bg-chatter-bg p-4 rounded font-mono text-sm break-all border border-chatter-surface">
-                            {accessToken}
+                        <p className="text-chatter-text-secondary text-sm text-center">
+                            Return to Chatter and paste this token to log in.
+                        </p>
+                        <div className="bg-chatter-bg p-4 rounded font-mono text-sm break-all border border-chatter-surface text-center">
+                            {maskedToken}
                         </div>
                         <button
                             onClick={copyToClipboard}
