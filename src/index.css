@@ -1,16 +1,22 @@
 @import "tailwindcss";
 
 @theme {
-  --color-chatter-bg: #181421;
-  --color-chatter-surface: #211d2c;
-  --color-chatter-text-primary: #e0e0e0;
-  --color-chatter-text-secondary: #a0a0a0;
-  --color-chatter-accent: #6366f1;
+  --color-chatter-bg: #0f0c16;
+  --color-chatter-surface: #181421;
+  --color-chatter-surface-elevated: #211b2d;
+  --color-chatter-surface-inset: #0b0910;
+  --color-chatter-border: #342b43;
+  --color-chatter-border-strong: #4b3d60;
+  --color-chatter-text-primary: #f6f2fb;
+  --color-chatter-text-secondary: #aaa1b8;
+  --color-chatter-text-tertiary: #7d7489;
+  --color-chatter-accent: #a855f7;
+  --color-chatter-accent-bright: #c084fc;
 }
 
 :root {
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
+  color-scheme: dark;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -18,5 +24,26 @@
 
   @media (max-width: 1024px) {
     font-size: 16px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--color-chatter-bg);
+}
+
+body {
+  min-width: 320px;
+  background: var(--color-chatter-bg);
+}
+
+::selection {
+  color: var(--color-chatter-text-primary);
+  background: color-mix(in srgb, var(--color-chatter-accent) 45%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
