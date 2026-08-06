@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { parseParams } from '../util/uri';
+import CheckmarkIcon from '../components/icons/checkmark-icon';
 
 export default function OauthRedirectPage() {
     const [accessToken, setAccessToken] = useState<string|undefined>();
@@ -31,9 +32,7 @@ export default function OauthRedirectPage() {
             <div className="bg-gel-surface p-8 rounded-lg shadow-xl max-w-md w-full">
                 <div className="flex justify-center mb-4">
                     <div className="flex items-center justify-center w-14 h-14 rounded-full bg-green-600/20 text-green-500">
-                        <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="m5 12 4 4L19 6" />
-                        </svg>
+                        <CheckmarkIcon className="size-8" />
                     </div>
                 </div>
                 <h2 className="text-2xl font-bold mb-4 text-center">Authentication Successful</h2>
