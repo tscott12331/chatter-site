@@ -3,7 +3,7 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "name": "chatter-site",
+      "name": "gel-site",
       "dependencies": {
         "@tailwindcss/vite": "^4.3.2",
         "react": "^19.2.7",

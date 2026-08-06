@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { parseParams } from '../util/uri';
+import CheckmarkIcon from '../components/icons/checkmark-icon';
 
 export default function OauthRedirectPage() {
     const [accessToken, setAccessToken] = useState<string|undefined>();
@@ -22,25 +23,36 @@ export default function OauthRedirectPage() {
         }
     };
 
+    const maskedToken = accessToken
+        ? `${accessToken.slice(0, 4)}${'•'.repeat(Math.max(8, accessToken.length - 8))}${accessToken.slice(-4)}`
+        : '';
+
     return (
-        <div className="min-h-screen bg-chatter-bg text-chatter-text-primary flex items-center justify-center p-4">
-            <div className="bg-chatter-surface p-8 rounded-lg shadow-xl max-w-md w-full">
+        <div className="min-h-screen bg-gel-bg text-gel-text-primary flex items-center justify-center p-4">
+            <div className="bg-gel-surface p-8 rounded-lg shadow-xl max-w-md w-full">
+                <div className="flex justify-center mb-4">
+                    <div className="flex items-center justify-center w-14 h-14 rounded-full bg-green-600/20 text-green-500">
+                        <CheckmarkIcon className="size-8" />
+                    </div>
+                </div>
                 <h2 className="text-2xl font-bold mb-4 text-center">Authentication Successful</h2>
                 {accessToken ? (
                     <div className="space-y-4">
-                        <p className="text-chatter-text-secondary text-sm">Your access token:</p>
-                        <div className="bg-chatter-bg p-4 rounded font-mono text-sm break-all border border-chatter-surface">
-                            {accessToken}
+                        <p className="text-gel-text-secondary text-sm text-center">
+                            Return to Gel and paste this token to log in.
+                        </p>
+                        <div className="bg-gel-bg p-4 rounded font-mono text-sm break-all border border-gel-surface text-center">
+                            {maskedToken}
                         </div>
                         <button
                             onClick={copyToClipboard}
-                            className={`w-full py-2 px-4 rounded font-semibold transition ${copied ? 'bg-green-600' : 'bg-chatter-accent hover:opacity-90'}`}
+                            className={`w-full py-2 px-4 rounded font-semibold transition ${copied ? 'bg-green-600' : 'bg-gel-accent hover:opacity-90'}`}
                         >
                             {copied ? 'Copied!' : 'Copy to Clipboard'}
                         </button>
                     </div>
                 ) : (
-                    <p className="text-center text-chatter-text-secondary">Processing authentication...</p>
+                    <p className="text-center text-gel-text-secondary">Processing authentication...</p>
                 )}
             </div>
         </div>
