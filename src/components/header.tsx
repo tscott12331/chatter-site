@@ -11,7 +11,7 @@ export default function Header() {
                         className="group inline-flex items-center gap-3 rounded-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gel-accent"
                     >
                         <span className="grid size-9 place-items-center rounded-xl border border-gel-border-strong bg-gel-surface-elevated shadow-lg shadow-black/20 transition group-hover:border-gel-accent/60">
-                            <GelIcon className="p-1 fill-gel-accent-bright" />
+                            <GelIcon className="p-1.5 fill-gel-accent-bright" />
                         </span>
                         <span className="text-lg font-bold tracking-tight">Gel</span>
                     </a>

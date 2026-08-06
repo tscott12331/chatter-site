@@ -76,7 +76,7 @@ export default function HomePage() {
                             <FeatureCard
                                 size="normal"
                                 title="Use your favorite emotes"
-                                description="Browse 7TV emotes from a responsive picker with helpful previews and tooltips."
+                                description="Browse emotes for different providers from a responsive picker with helpful previews and tooltips."
                                 imageSrc={`${import.meta.env.BASE_URL}emote-menu.png`}
                             />
                             <FeatureCard
