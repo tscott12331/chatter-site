@@ -13,7 +13,7 @@ export default function Footer() {
                         Limitations
                     </a>
                     <a
-                        href="https://github.com/tscott12331/chatter-wails"
+                        href="https://github.com/tscott12331/gel"
                         target="_blank"
                         rel="noreferrer"
                         className="inline-flex items-center gap-2 font-semibold text-gel-text-primary transition hover:text-gel-accent-bright focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gel-accent"

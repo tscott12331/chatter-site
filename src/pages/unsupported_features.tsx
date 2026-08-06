@@ -64,7 +64,7 @@ export default function MissingFeaturesPage() {
                                     If you know of a feature that would improve the experience, open an issue or pull request on GitHub.
                                 </p>
                                 <a
-                                    href="https://github.com/tscott12331/chatter-wails/issues"
+                                    href="https://github.com/tscott12331/gel/issues"
                                     target="_blank"
                                     rel="noreferrer"
                                     className="mt-6 inline-flex items-center rounded-xl bg-gel-accent px-5 py-2.5 font-semibold text-white transition hover:bg-gel-accent-bright focus:outline-none focus:ring-2 focus:ring-gel-accent-bright focus:ring-offset-2 focus:ring-offset-gel-bg"

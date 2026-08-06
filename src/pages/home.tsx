@@ -1,7 +1,7 @@
 import FeatureCard from "../components/feature-card";
 import GitHubIcon from "../components/icons/github-icon";
 
-const githubUrl = "https://github.com/tscott12331/chatter-wails";
+const githubUrl = "https://github.com/tscott12331/gel";
 
 export default function HomePage() {
     return (
